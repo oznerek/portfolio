@@ -1,0 +1,109 @@
+//  ANIMATION FROM ABOBUT SECTION
+@keyframes photo_flash {
+  0% {
+    background: white;
+  }
+  100% {
+    background: none;
+  }
+}
+
+@keyframes make_photo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: skewX(-10deg) skewY(10deg);
+  }
+}
+
+@keyframes blur {
+  100% {
+    filter: blur(20px);
+  }
+}
+
+// ANIMATION FROM HEADER SECTION
+
+@keyframes rotate {
+    0% {
+      transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes coverFromLeft {
+    0% {
+      width: 0;
+    }
+    75% {
+      width: 100%;
+    }
+    85% {
+      width: 0%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  
+  @keyframes show__slide {
+    100% {
+      visibility: visible;
+    }
+  }
+  
+  @keyframes zooming {
+    0% {
+      transform:scale(1) translate(-50%, -50%);
+    }
+    100% {
+      transform: scale(1.4) translate(-30%, -50%);
+  
+    }
+  }
+  
+
+// ANIMATIONS FROM NAVIGATION
+
+@keyframes scroll {
+    0% {
+      top: 1rem;
+    }
+    100% {
+      top: 2rem;
+    }
+  }
+  
+  @keyframes move__down {
+    0% {
+      top: -5rem;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  
+  @keyframes move__right {
+    0% {
+      left: -3rem;
+    }
+    100% {
+      left: 2rem;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes move__up {
+    0% {
+      bottom: -5rem;
+    }
+    100% {
+      bottom: 0rem;
+      opacity: 1;
+    }
+  }
+  

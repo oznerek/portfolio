@@ -1,0 +1,123 @@
+.navigation {
+  width: 100%;
+}
+.nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 3rem 0 3rem;
+  font-size: 150%;
+  animation: move__down 2s linear 7s forwards;
+
+  @media only screen and (max-width: $phone) {
+    font-size: 100%;
+  }
+  &__link {
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+    width: 8rem;
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width: $phone) {
+      width: 6rem;
+    }
+    i {
+      color: $secondary-color-light;
+    }
+    .github:hover {
+      border-radius: 100%;
+      background-color: white;
+      color: black;
+    }
+    .linkedin:hover {
+      width: 23px;
+      height: 23px;
+      background-color: white;
+      color: blue;
+    }
+  }
+}
+
+.side__navigation {
+  position: fixed;
+  top: 50%;
+  width: 5%;
+  margin-left: 1rem;
+  transform: translate(0, -50%);
+  z-index: 10;
+  list-style-type: circle;
+  animation: move__right 2s linear 7s forwards;
+
+  .active {
+    list-style-type: disc;
+  }
+  a {
+    text-decoration: none;
+  }
+  &-text {
+    color: $secondary-color-light;
+    font-weight: 100;
+    width: 100%;
+    display: block;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+// Muse ( scroll down )
+.mouse {
+  width: 8rem;
+  margin-bottom: 2rem;
+  position: fixed; 
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+  animation: move__up 2s linear 7s forwards;
+
+  @media only screen and (max-width: $tablet) {
+    transform: scale(0.8) translate(-60%);
+  }
+  @media only screen and (max-width: $phone) {
+    margin-bottom: -0.5rem;
+    transform: scale(0.6) translate(-80%);
+  }
+}
+.scroll {
+  width: 4rem;
+  height: 6rem;
+  border: 0.3rem solid $secondary-color;
+  border-radius: 5rem;
+  position: relative;
+
+  &:hover {
+    background-color: $secondary-color-light;
+    border-color: $secondary-color-light;
+  }
+
+  &__icon {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 1rem;
+    left: 1.15rem;
+    border-radius: 100%;
+    background-color: $secondary-color;
+    animation: scroll 2s infinite;
+  }
+  &__text {
+    position: absolute;
+    top: 3rem;
+    font-size: 80%;
+  }
+}

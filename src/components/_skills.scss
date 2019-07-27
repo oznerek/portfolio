@@ -1,0 +1,10 @@
+.skills{
+    height: 100% ;
+    position: relative;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem
+}
