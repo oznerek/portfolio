@@ -1,10 +1,118 @@
-.skills{
-    height: 100% ;
-    position: relative;
+.skills {
+  height: 100%;
+
+  position: relative;
+  background-color: $secondary-color-light;
+  color: $primary-color;
+  @media only screen and (max-width: $phone) {
+    height: min-content;
+  }
+
+  .page__title-number::before {
+    background-color: $primary-color;
+  }
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem
+  padding: 15rem 0 15rem 0;
+  height: 100%;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 2rem;
+  grid-column-gap: 2rem;
+  margin: 0 5rem 0 5rem;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 2s;
+  @media only screen and (max-width: $tablet) {
+    padding: 12rem 0 12rem 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media only screen and (max-width: $phone) {
+    margin: 0 3rem 0 3rem;
+    padding: 10rem 0 10rem 0;
+    grid-template-columns: 1fr;
+  }
+}
+
+.skill {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 100%;
+  @media only screen and (max-width: $phone) {
+    font-size: 80%;
+  }
+
+  &__image {
+    width: 10rem;
+    overflow: hidden;
+    padding-right: 1rem;
+    .react {
+      transform: scale(1.2);
+    }
+    img {
+      width: 90%;
+      height: 90%;
+    }
+    // transform: scale(.5);
+  }
+  &__information {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &-frame {
+      display: flex;
+      align-items: baseline;
+    }
+    &-name {
+      font-weight: 600;
+    }
+    &-experience {
+      font-size: 70%;
+      font-weight: 200;
+      margin-left: 2rem;
+      color: $primary-color-light;
+    }
+  }
+
+  &__bar {
+    width: 100%;
+    height: 0.8rem;
+    border-radius: 50px;
+  }
+}
+//rgb(247, 224, 24)
+.html {
+  background-image: linear-gradient(to right, rgb(229, 76, 33), black);
+}
+.css {
+  background-image: linear-gradient(to right, rgb(38, 77, 228), black);
+}
+.js {
+  background-image: linear-gradient(to right, rgb(247, 224, 24), black);
+}
+.react {
+  background-image: linear-gradient(to right, rgb(5, 242, 219), black);
+}
+
+.bootstrap {
+  background-image: linear-gradient(to right, rgb(93, 43, 79), black);
+}
+
+.sass {
+  background-image: linear-gradient(to right, rgb(204, 102, 153), black);
+}
+
+.mysql {
+  background-image: linear-gradient(to right, rgb(3, 101, 140), black);
+}
+
+.node {
+  background-image: linear-gradient(to right, rgb(113, 166, 104), black);
+}
+.git {
+  background-image: linear-gradient(to right, rgb(242, 65, 48), black);
 }

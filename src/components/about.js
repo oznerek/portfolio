@@ -38,7 +38,7 @@ export default class About extends React.Component {
           </div>
 
           <div className="buttons">
-            <button className="btn btn__about">Technologies</button>
+            <button className="btn btn__about">Skills</button>
             <button className="btn btn__about">Project</button>
           </div> 
           </div>
