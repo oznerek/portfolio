@@ -2,7 +2,8 @@ import React from "react";
 import Header from "./components/header";
 import Navigation from "./components/navigation";
 import About from "./components/about";
-import Skills from './components/skills'
+import Skills from './components/skills';
+import Projects from './components/projects';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navigation />
         <About />
         <Skills/>
+        <Projects />
     </div>
   );
 }

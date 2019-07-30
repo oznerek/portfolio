@@ -41,9 +41,6 @@
     75% {
       width: 100%;
     }
-    85% {
-      width: 0%;
-    }
     100% {
       width: 0%;
     }
@@ -82,6 +79,7 @@
       top: -5rem;
     }
     100% {
+      opacity: 1;
       top: 0;
     }
   }
@@ -103,6 +101,28 @@
     100% {
       bottom: 0rem;
       opacity: 1;
+    }
+  }
+
+  // ANIMATIONS FROM SKILLS SECTION
+
+  @keyframes diamond {
+    0% {
+      opacity: 1;
+      left: -5%;
+    }
+    100% {
+      opacity: 1;
+      left: 100%;
+    }
+  }
+  @keyframes barGrowRight {
+    0%{
+
+      width: 0%;
+    }
+    100% {
+      width: 100%;
     }
   }
   

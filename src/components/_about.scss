@@ -10,14 +10,14 @@
     background: url(img/me.jpg);
     background-size: cover;
     background-position: center;
-     animation: blur 1s 2s forwards;
+    //  animation: blur 1s 2s forwards;
   }
 }
 .flash {
   display: flex;
   width: 100%;
   height: 100%;
-   animation: photo_flash 3s 2s forwards;
+  //  animation: photo_flash 3s 2s forwards;
   transition: 2s;
   position: absolute;
   top: 0;
@@ -43,25 +43,29 @@
   width: 25rem;
   height: 30rem;
   transition: 2s;
-  opacity: 0;
+  opacity: 1;
   box-shadow: 15px 15px 20px black;
-  animation: make_photo 3s 2s forwards;
+  // animation: make_photo 3s 2s forwards;
   border-style: solid;
   border-width: 1.5rem 1.5rem 8rem 1.5rem;
   border-color: white;
   background-image: url(img/mee.jpg);
   background-size: cover;
   transform: skewX(-10deg) skewY(10deg);
+  z-index: 3;
+
+  @media only screen and (max-width: $tablet-land) {
+    transform: scale(0.8) skewX(-10deg) skewY(10deg) ;
+  }
 
   @media only screen and (max-width: $tablet) {
-    transform: scale(0.7) skewX(-10deg) skewY(10deg) translate(20rem,8rem);
-    z-index: 3;
-  }
-  @media only screen and (max-width: $phone) {
-    transform: scale(0.6) skewX(-10deg) skewY(10deg) translate(20rem,8rem);
-    z-index: 3;
+    transform: scale(0.7) skewX(-10deg) skewY(10deg) translate(120%, -10%);
   }
 
+  @media only screen and (max-width: $phone) {
+    transform: scale(0.7) skewX(-10deg) skewY(10deg) translate(50%, 10%);
+
+  }
 
   &__motto {
     font-size: 110%;
@@ -75,10 +79,10 @@
 }
 
 .background__information {
-  width: 50%;
+  width: 80%;
   height: 100%;
   display: flex;
-  @media only screen and (max-width: $tablet) {
+  @media only screen and (max-width: $tablet-land) {
     font-size: 80%;
     width: 80%;
     margin: auto;
@@ -92,12 +96,12 @@
   margin: auto 0 auto auto;
   padding: 4rem 3rem; 
   overflow: auto;
-  opacity: 0;
+  opacity: 1;
   width: 80%;
   height: 60%;
   border-radius: 10px;
   background-color: rgba($primary-color-light, 0.6);
-  animation: move__right 2s linear 4s forwards;
+  // animation: move__right 2s linear 4s forwards;
  
   &::-webkit-scrollbar {
     width: .6em;
@@ -125,14 +129,33 @@
     font-family: sans-serif;
     z-index: 1;
   }
-  @media only screen and (max-width: $tablet) {
-    width: 100%;
+
+  @media only screen and (max-width: $tablet-land) {
+width: 80%;
+  }
+
+  @media only screen and (max-width: $tablet){
     height: 50%; 
-    margin: auto 0 40% 0;
+    margin: auto 0 30% 0;
     z-index: 2;
     padding: 3rem 2rem; 
-
   }
+
+  @media only screen and (max-width: $phone){
+    width: 100%;
+    margin: auto 0 2% 0;
+
+    font-size: 80%;
+  }
+
+  @media only screen and (max-width: $phone),screen and (max-height: 300px){
+    width: 100%;
+    margin: auto 0 40% 0;
+
+    font-size: 80%;
+  }
+
+
 }
 
 .title {

@@ -1,7 +1,12 @@
 import React from "react";
 
 export default class Skills extends React.Component {
+  
   render() {
+    let wys1 =document.body.clientHeight
+let wys2 =document.documentElement.clientHeight
+let wys3 =document.documentElement.scrollHeight
+console.log(wys1, wys2, wys3);
     return (
       <section id="skills" className="skills">
         <div className="page__title">
@@ -12,116 +17,116 @@ export default class Skills extends React.Component {
         <div className="grid">
           <div className="skill">
             <div className="skill__image">
-              <img src="img/html5.png" />
+              <img src="img/html5.png" alt='html' />
             </div>
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">HTML5</h3>
                 <p className="skill__information-experience"> 1 year</p>
               </div>
-              <div className="skill__bar html" />
+              <div className="skill__bar html" ><div className='diamond'></div></div>
             </div>
           </div>
           <div className="skill">
             <div className="skill__image">
-              <img src="img/css3.svg" />
+              <img src="img/css3.svg" alt='css' />
             </div>
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">CSS3</h3>
                 <p className="skill__information-experience"> 1 year</p>
               </div>
-              <div className="skill__bar css" />
+              <div className="skill__bar css" ><div className='diamond'></div></div>
             </div>
           </div>
 
           <div className="skill">
             <div className="skill__image">
-              <img src="img/js.png" />
+              <img src="img/js.png" alt='java script'/>
             </div>
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">Java Script</h3>
                 <p className="skill__information-experience"> 1 year</p>
               </div>
-              <div className="skill__bar js" />
+              <div className="skill__bar js" ><div className='diamond'></div></div>
             </div>
           </div>
 
           <div className="skill">
             <div className="skill__image">
-              <img src="img/bootstrap.png" />
+              <img src="img/bootstrap.png" alt='bootstrap' />
             </div>
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">Bootstrap 4</h3>
                 <p className="skill__information-experience">9 mount</p>
               </div>
-              <div className="skill__bar bootstrap" />
+              <div className="skill__bar bootstrap" ><div className='diamond'></div></div>
             </div>
           </div>
 
           <div className="skill">
             <div className="skill__image">
-              <img src="img/react.png" />
+              <img src="img/react.png" alt='react' />
             </div>
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">React</h3>
                 <p className="skill__information-experience"> 9 mounth</p>
               </div>
-              <div className="skill__bar react" />
+              <div className="skill__bar react" ><div className='diamond'></div></div>
             </div>
           </div>
 
           <div className="skill">
             <div className="skill__image">
-              <img src="img/sass.svg" />
+              <img src="img/sass.svg" alt='sass'/>
             </div>
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">Sass</h3>
                 <p className="skill__information-experience"> 5 mounth</p>
               </div>
-              <div className="skill__bar sass" />
+              <div className="skill__bar sass" ><div className='diamond'></div></div>
             </div>
           </div>
 
           <div className="skill">
             <div className="skill__image">
-              <img src="img/mysql.svg" />
+              <img src="img/mysql.svg" alt='mysql' />
             </div>
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">MySql</h3>
                 <p className="skill__information-experience"> 4 month</p>
               </div>
-              <div className="skill__bar mysql" />
+              <div className="skill__bar mysql" ><div className='diamond'></div></div>
             </div>
           </div>
 
           <div className="skill">
             <div className="skill__image">
-              <img src="img/node.png" />
+              <img src="img/node.png" alt='node js' />
             </div>
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">Node JS</h3>
                 <p className="skill__information-experience"> 3 mount</p>
               </div>
-              <div className="skill__bar node" />
+              <div className="skill__bar node" ><div className='diamond'></div></div>
             </div>
           </div>
           <div className="skill">
             <div className="skill__image">
-              <img src="img/git.png" />
+              <img src="img/git.png"  alt='git'/>
             </div>
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">Git</h3>
                 <p className="skill__information-experience"> 6 mount</p>
               </div>
-              <div className="skill__bar git" />
+              <div className="skill__bar git" ><div className='diamond'></div></div>
             </div>
           </div>
         </div>

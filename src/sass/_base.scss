@@ -1,17 +1,18 @@
 /* Color Theme Swatches in RGBA */
-$primary-color: rgba(12, 49, 63, 1); 
-$primary-color-light: rgba(14, 68, 89, 1);
-$secondary-color: rgba(134, 166, 154, 1); 
-$secondary-color-light: rgba(210, 214, 217, 1); 
-$red-color: rgba(165, 44, 44, 1); 
+$primary-color: rgba(40, 40, 40, 1);
+$primary-color-light: rgb(46, 54, 57);
+$secondary-color: rgba(134, 166, 154, 1);
+$secondary-color-light: rgba(210, 214, 217, 1);
+$red-color: rgba(165, 44, 44, 1);
 
 // MEDIA SIZE
 
-$desktop : 75rem;  // 1200px
-$tablet_land :56.25rem; //900px
-$tablet: 48rem;    //760
-$phone : 30rem;  //360
+$desktop: 75rem; // 1200px
+$tablet_land: 56.25rem; //900px
+$tablet: 48rem; //760
+$phone: 30rem; //480
 
+$pageSize: 300;
 @font-face {
   font-family: disney_font;
   src: url(fonts/disney.otf);
@@ -31,30 +32,33 @@ html {
   font-size: 62.5%;
 }
 body {
-    background-color: $primary-color;
-    height: 100%;
-    color: $secondary-color-light;
-    font-family:  'Arial Narrow', Arial, sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    font-size: 1.8rem;
+  background-color: $primary-color;
+  height: 100%;
+  color: $secondary-color-light;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1.8rem;
 }
 
-.root, .App {
+.root,
+.App {
   position: relative;
   height: 100%;
+  min-height: 60rem; 
+
+
 }
 
-
 body::-webkit-scrollbar {
-  width: .7em;
+  width: 0.7em;
   background-color: $primary-color;
 }
 
 body::-webkit-scrollbar-thumb {
-border: 1px solid $primary-color;
-background-color: $secondary-color-light;
-border-radius: 50px;
+  border: 1px solid $primary-color;
+  background-color: $secondary-color-light;
+  border-radius: 50px;
 }
 
 .page__title {
@@ -64,51 +68,49 @@ border-radius: 50px;
   display: flex;
   align-items: center;
   z-index: 9;
-
+  color: currentColor;
   @media only screen and (max-width: $phone) {
     top: 4rem;
   }
-  
- &-text {
-   display: flex;
-   align-self: center; 
-   font-size: 200%;
-   letter-spacing: .5rem;
-   margin: auto;
-   transform: translateX(-5rem);
-   
-  @media only screen and (max-width: $phone) {
-    font-size: 100%;
-    margin-left: 5%;
-    transform: translateX(0);
+
+  &-text {
+    display: flex;
+    align-self: center;
+    font-size: 200%;
+    letter-spacing: 0.5rem;
+    margin: auto;
+    transform: translateX(-5rem);
+
+    @media only screen and (max-width: $phone) {
+      font-size: 100%;
+      margin-left: 5%;
+      transform: translateX(0);
+    }
   }
- }
-  &-number{
+  &-number {
     display: flex;
     align-items: center;
-    font-family: 'Lucida Grande';
-        color: $red-color; 
-    font-weight: 900;    
+    font-family: "Lucida Grande";
+    color: $red-color;
+    font-weight: 900;
     font-size: 250%;
-    
-  @media only screen and (max-width: $phone) {
-font-size: 125%;
-  }
 
+    @media only screen and (max-width: $phone) {
+      font-size: 125%;
+    }
 
-    &::before{
+    &::before {
       content: " ";
       display: block;
       width: 5rem;
       height: 3px;
       background-color: $secondary-color-light;
-      margin-right: 1rem; 
-      
-  @media only screen and (max-width: $phone) {
-    width: 3rem;
-    height: 2px;
-  }
+      margin-right: 1rem;
 
+      @media only screen and (max-width: $phone) {
+        width: 3rem;
+        height: 2px;
+      }
     }
   }
 }
