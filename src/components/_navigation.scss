@@ -1,10 +1,13 @@
 .navigation {
   width: 100%;
+  .dark__nav{
+    color: $primary-color !important;
+  } 
 }
 .nav {
   position: fixed;
-  right: 0;
   top: 0;
+  right: 0;
   z-index: 10;
   display: flex;
   justify-content: space-between;
@@ -12,12 +15,12 @@
   padding: 1rem 3rem 0 3rem;
   font-size: 150%;
   animation: move__down 2s linear 7s forwards;
+  color: currentColor;
 
   @media only screen and (max-width: $phone) {
     font-size: 100%;
   }
-  &__link {
-    color: blue;
+  &__link {color: currentColor;
     text-decoration: none;
     cursor: pointer;
     width: 8rem;
@@ -26,8 +29,8 @@
     @media only screen and (max-width: $phone) {
       width: 6rem;
     }
-    i {
-      color: $secondary-color-light;
+    i,a {
+      color: currentColor;
     }
     .github:hover {
       border-radius: 100%;
@@ -35,9 +38,12 @@
       color: black;
     }
     .linkedin:hover {
-      height: 100%;
+      border-radius: 100%;
       background-color: white;
       color: blue;
+      &::before {
+        height: 50%;
+      }
     }
   }
 }
@@ -45,7 +51,7 @@
 .side__navigation {
   position: fixed;
   top: 50%;
-  left: -2rem;
+  left: 2rem;
   width: 5%;
   margin-left: 1rem;
   transform: translate(0, -50%);
@@ -53,14 +59,17 @@
   list-style-type: circle;
   animation: move__right 2s linear 7s forwards;
 
+
+
   .active {
     list-style-type: disc;
   }
   a {
     text-decoration: none;
+    color: currentColor;
   }
   &-text {
-    color: $secondary-color-light;
+    color: currentColor;
     font-weight: 100;
     width: 100%;
     display: block;
@@ -80,6 +89,7 @@
   position: fixed; 
   display: flex;
   justify-content: center;
+  bottom: 2rem;
   left: 50%;
   transform: translate(-50%);
   z-index: 10;
@@ -96,14 +106,9 @@
 .scroll {
   width: 4rem;
   height: 6rem;
-  border: 0.3rem solid $secondary-color;
+  border: 0.3rem solid currentColor;
   border-radius: 5rem;
   position: relative;
-
-  &:hover {
-    background-color: $secondary-color-light;
-    border-color: $secondary-color-light;
-  }
 
   &__icon {
     width: 1rem;
@@ -112,7 +117,7 @@
     top: 1rem;
     left: 1.15rem;
     border-radius: 100%;
-    background-color: $secondary-color;
+    background-color: currentColor;
     animation: scroll 2s infinite;
   }
   &__text {

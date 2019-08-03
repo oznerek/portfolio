@@ -1,24 +1,12 @@
 .projects {
-  height: 100%;
+  min-height: 100%;
+  height: min-content;
   position: relative;
 }
 
 .timeLine {
   width: 100%;
   padding-top: 15rem;
-  &::before {
-    content: "";
-    min-height: 100%;
-    width: 5px;
-    background-image: url(img/line.png);
-    background-repeat: repeat;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    @media only screen and (max-width: $phone) {
-        left: 6rem;
-    }
-  }
 }
 
 .project {
@@ -30,7 +18,20 @@
   position: relative;
   flex-wrap: wrap;
 
+  &::after {
+    content: "";
+    height: 100%;
+    width: 0.6rem;
+    background-image: url(img/line.png);
+    background-repeat: repeat;
+    position: absolute;
+  }
+
   &:hover {
+    .year {
+      color: $red-color;
+      border-color: $red-color; 
+    }
     .project__photo {
       width: 60%;
       filter: brightness(1);
@@ -68,54 +69,64 @@
     justify-content: center;
     align-items: center;
     @media only screen and (max-width: $phone) {
-        left: 0;
+      left: 0;
     }
-
     div {
       transform: rotateZ(-45deg);
     }
   }
+
   &__left {
     flex-direction: row;
     height: min-content;
+    &::after {
+      right: -0.3rem;
+      @media only screen and (max-width: $phone) {
+        left: 5.7rem;
+      }
+    }
   }
   &__right {
     flex-direction: row-reverse;
     padding: 1rem 3rem 1rem 1rem;
     margin-left: auto;
+    &::after {
+      left: -0.3rem;
+      @media only screen and (max-width: $phone) {
+        left: 5.7rem;
+      }
+    }
     .year {
       left: -2.5rem;
-      
     }
   }
 
-  
-    &__left,
-    &__right {
-        @media only screen and (max-width: $tablet-land) {
+  &__left,
+  &__right {
+    @media only screen and (max-width: $tablet-land) {
       flex-direction: column-reverse;
       .year {
-        top: 0;
+        top: -0.5rem;
       }
     }
     @media only screen and (max-width: $phone) {
-        width: 100%;
-        padding: 1rem 1rem 1rem 10rem; 
-        .year{
-            top: 0;
-            left: 3.5rem;
-        }
+      width: 100%;
+      padding: 1rem 1rem 1rem 10rem;
+      .year {
+        top: -0.5rem;
+        left: 3.5rem;
+      }
     }
   }
- 
+
   &__about {
     width: 30%;
-    // visibility: hidden;
+    visibility: hidden;
     color: $secondary-color;
     font-size: 90%;
     font-weight: 100;
     padding: 0.5rem;
-    transition: .5s;
+    transition: 0.5s;
     @media only screen and (max-width: $tablet-land) {
       width: 100%;
       display: none;
@@ -136,16 +147,38 @@
       border: 2px solid currentColor;
       border-radius: 5px;
       font-size: 70%;
-      padding: 0 0.2rem 0 0.2rem;
+      padding: 0 0.5rem 0 0.5rem;
+    }
+  }
+  .polluted {    
+    background-image: url(img/polluted.jpg);
+    background-size: cover;
+    background-position: center;  
+  }
+  
+  .foodhouse {    
+    background-image: url(img/foodhouse.jpg);
+    background-size: cover;
+    background-position: center;  
+  }
+  .portfolio {    
+    background-image: url(img/portfolio.jpg);
+    background-size: cover;
+    background-position: center;  
+  }
+  .formcreator {    
+    background-image: url(img/formcreator.jpg);
+    background-size: cover;
+    background-position: center;  
+    .project__photo-name{
+      border-color:$primary-color-light;
+      color: $primary-color;
     }
   }
 
   &__photo {
     width: 70%;
     height: 20rem;
-    background-image: url(img/polluted.png);
-    background-size: cover;
-    background-position: center;
     position: relative;
     filter: brightness(0.2);
     transition: 0.5s;
@@ -177,21 +210,21 @@
       justify-content: space-evenly;
       align-items: center;
 
-     div{display: flex;
+      div {
+        display: flex;
         justify-content: center;
         align-items: center;
-          width: 4.8rem;
+        width: 4.8rem;
         height: 4.8rem;
-         border-radius: 100%;
-         background-color: rgba($secondary-color, .5);
-         cursor: pointer;
-         &:hover {
-
+        border-radius: 100%;
+        background-color: rgba($secondary-color, 0.5);
+        cursor: pointer;
+        &:hover {
           background-color: $secondary-color-light;
           filter: contrast(1.5);
           transform: scale(1.2);
-      }
         }
+      }
     }
   }
 }

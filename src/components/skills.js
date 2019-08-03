@@ -8,7 +8,7 @@ let wys2 =document.documentElement.clientHeight
 let wys3 =document.documentElement.scrollHeight
 console.log(wys1, wys2, wys3);
     return (
-      <section id="skills" className="skills">
+      <section id="skills" className="skills scrollspy">
         <div className="page__title">
           <p className="page__title-number">02</p>
           <h2 className="page__title-text">Skills</h2>

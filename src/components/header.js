@@ -1,9 +1,20 @@
 import React from "react";
-
+import $ from 'jquery';
 export default class Header extends React.Component {
+
+
   render() {
+    var wrap = $("#header");
+
+wrap.on("scroll", function(e) {
+    
+  if (this.scrollTop > 147) {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#contact").offset().top
+  }, 2000);  }
+});
     return (
-      <section id="header" className="header">
+      <section id="header" className="header scrollspy">
         <div className="header__loader"><div className='text__center'>Loading . . .</div></div>
         <div className="slide__one" />
         <div className="slide__two"><div className='text__center text__zoom'>Welcome on my web</div></div>
