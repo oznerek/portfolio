@@ -1,10 +1,8 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
 
 export default class About extends React.Component {
   render() {
     return (
-      <Fade bottom>
         <section id="about" className="about scrollspy">
           <div className="about__background" />
           <div className="flash">
@@ -47,7 +45,6 @@ export default class About extends React.Component {
             </div>
           </div>
         </section>
-      </Fade>
     );
   }
 }

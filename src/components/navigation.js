@@ -9,7 +9,7 @@ export default class Navigation extends React.Component {
     $(window).bind("scroll", function() {
       var currentTop = $(window).scrollTop();
       var elems = $(".scrollspy");
-      elems.each(function(index) {
+      elems.each(function() {
         var elemTop = $(this).offset().top;
         var elemBottom = elemTop + $(this).height();
         var userWindowHeight = document.documentElement.clientHeight;

@@ -1,6 +1,6 @@
 .contact {
     height: 100%; 
-    background-image: url(../img/contacts.jpg);
+    background: url(img/contacts.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -116,5 +116,17 @@
         color: $primary-color;
         align-self: center;
     } 
+    .validate {
+        width: 100%;
+        font-weight: 100;
+        color: $red-color;
+        visibility: hidden;
+   
+    &__email {
+        font-weight: 100;
+        display: none;
+        text-align: end;
+    }
+}
 }
 

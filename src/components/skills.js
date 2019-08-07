@@ -3,10 +3,6 @@ import React from "react";
 export default class Skills extends React.Component {
   
   render() {
-    let wys1 =document.body.clientHeight
-let wys2 =document.documentElement.clientHeight
-let wys3 =document.documentElement.scrollHeight
-console.log(wys1, wys2, wys3);
     return (
       <section id="skills" className="skills scrollspy">
         <div className="page__title">
