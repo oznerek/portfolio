@@ -100,7 +100,6 @@ export default class Skills extends React.Component {
               <div className="skill__bar mysql" ><div className='diamond'></div></div>
             </div>
           </div>
-
           <div className="skill">
             <div className="skill__image">
               <img src="img/node.png" alt='node js' />
@@ -111,6 +110,18 @@ export default class Skills extends React.Component {
                 <p className="skill__information-experience"> 3 mount</p>
               </div>
               <div className="skill__bar node" ><div className='diamond'></div></div>
+            </div>
+          </div>
+          <div className="skill">
+            <div className="skill__image">
+              <img src="img/jquery.png" alt='jquery' />
+            </div>
+            <div className="skill__information">
+              <div className="skill__information-frame">
+                <h3 className="skill__information-name">jQuery</h3>
+                <p className="skill__information-experience"> 3 mount</p>
+              </div>
+              <div className="skill__bar jquery" ><div className='diamond'></div></div>
             </div>
           </div>
           <div className="skill">

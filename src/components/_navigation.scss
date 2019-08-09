@@ -6,7 +6,6 @@
 }
 .nav {
   position: fixed;
-  top: 0;
   right: 0;
   z-index: 10;
   display: flex;
@@ -15,6 +14,8 @@
   padding: 1rem 3rem 0 3rem;
   font-size: 150%;
   animation: move__down 2s linear 7s forwards;
+  -webkit-animation: move__down 2s linear 7s forwards;
+  -moz-animation: move__down 2s linear 7s forwards;
   color: currentColor;
 
   @media only screen and (max-width: $phone) {
@@ -51,13 +52,16 @@
 .side__navigation {
   position: fixed;
   top: 50%;
-  left: 2rem;
   width: 5%;
   margin-left: 1rem;
   transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
   z-index: 10;
   list-style-type: circle;
   animation: move__right 2s linear 7s forwards;
+  -webkit-animation: move__right 2s linear 7s forwards;
+  -moz-animation: move__right 2s linear 7s forwards;
 
 
 
@@ -89,18 +93,25 @@
   position: fixed; 
   display: flex;
   justify-content: center;
-  bottom: 2rem;
   left: 50%;
   transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
   z-index: 10;
   animation: move__up 2s linear 7s forwards;
+  -webkit-animation: move__up 2s linear 7s forwards;
+  -moz-animation: move__up 2s linear 7s forwards;
 
   @media only screen and (max-width: $tablet) {
     transform: scale(0.8) translate(-60%);
+    -webkit-transform: scale(0.8) translate(-60%);
+    -moz-transform: scale(0.8) translate(-60%);
   }
   @media only screen and (max-width: $phone) {
     margin-bottom: -0.5rem;
     transform: scale(0.6) translate(-80%);
+    -webkit-transform: scale(0.6) translate(-80%);
+    -moz-transform: scale(0.6) translate(-80%);
   }
 }
 .scroll {
@@ -119,6 +130,8 @@
     border-radius: 100%;
     background-color: currentColor;
     animation: scroll 2s infinite;
+    -webkit-animation: scroll 2s infinite;
+    -moz-animation: scroll 2s infinite;
   }
   &__text {
     position: absolute;

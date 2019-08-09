@@ -1,4 +1,5 @@
 import React from "react";
+import Slide from 'react-reveal/Slide'
 
 export default class Projects extends React.Component {
   render() {
@@ -9,7 +10,8 @@ export default class Projects extends React.Component {
           <h2 className="page__title-text">Projects</h2>
         </div>
         <div className="timeLine">
-          <div className="project project__left">
+        <Slide left> 
+        <div className="project project__left">
             <div className="year">
               <div>2018</div>
             </div>
@@ -32,15 +34,17 @@ export default class Projects extends React.Component {
               <div className="project__photo-name">Form Creator</div>
               <div className="project__photo-icon">
                 <div>
-                  <i className="far fa-eye" />
+                   <a href='https://oznerek.github.io/form-creator'> <i className="far fa-eye" /></a> 
                 </div>
                 <div>
-                  <i className="fas fa-code" />
+                   <a href='https://github.com/oznerek/form-creator'><i className="fas fa-code"/> </a> 
                 </div>
               </div>
             </div>
           </div>
+        </Slide>
 
+          <Slide right>
           <div className="project project__right">
             <div className="year">
               <div>2019</div>
@@ -68,15 +72,17 @@ export default class Projects extends React.Component {
               <div className="project__photo-name">Polluted City</div>
               <div className="project__photo-icon">
                 <div>
-                  <i className="far fa-eye" />
+                <a href='https://oznerek.github.io/Polluted-cities/'> <i className="far fa-eye" /> </a>
                 </div>
                 <div>
-                  <i className="fas fa-code" />
+                <a href='https://github.com/oznerek/Polluted-cities'> <i className="fas fa-code" /> </a>
                 </div>
               </div>
             </div>
           </div>
+          </Slide>
 
+          <Slide left>
           <div className="project project__left">
             <div className="year">
               <div>2019</div>
@@ -112,15 +118,17 @@ export default class Projects extends React.Component {
               </div>
               <div className="project__photo-icon">
                 <div>
-                  <i className="far fa-eye" />
+                <a href='https://oznerek.github.io/foodhouse'><i className="far fa-eye" /></a>
                 </div>
                 <div>
-                  <i className="fas fa-code" />
+                <a href='https://github.com/oznerek/foodhouse'> <i className="fas fa-code" /></a>
                 </div>
               </div>
             </div>
           </div>
+            </Slide>
 
+          <Slide right>
           <div className="project project__right">
             <div className="year">
               <div>2019</div>
@@ -144,14 +152,15 @@ export default class Projects extends React.Component {
               <div className="project__photo-name">Polluted City</div>
               <div className="project__photo-icon">
                 <div>
-                  <i className="far fa-eye" />
+                <a href='https://oznerek.github.io/portfolio/'> <i className="far fa-eye" /> </a>
                 </div>
                 <div>
-                  <i className="fas fa-code" />
+                <a href='https://github.com/oznerek/portfolio'> <i className="fas fa-code" /> </a>
                 </div>
               </div>
             </div>
           </div>
+            </Slide>
         </div>
       </section>
     );

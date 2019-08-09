@@ -7,17 +7,20 @@
   &__background {
     width: 100%;
     height: 100%;
-    background: url(img/me.jpg);
+    background: url(img/about_background.jpg);
     background-size: cover;
     background-position: center;
-    animation: blur 1s 2s forwards;
   }
+  .page__title{
+    color: $primary-color;
+  &-number::before {
+    background-color: $primary-color;
+  }}
 }
 .flash {
   display: flex;
   width: 100%;
   height: 100%;
-  animation: photo_flash 3s 2s forwards;
   transition: 2s;
   position: absolute;
   top: 0;
@@ -45,25 +48,32 @@
   transition: 2s;
   opacity: 0;
   box-shadow: 15px 15px 20px black;
-  animation: make_photo 3s 2s forwards;
   border-style: solid;
   border-width: 1.5rem 1.5rem 8rem 1.5rem;
   border-color: white;
-  background-image: url(img/mee.jpg);
+  background-image: url(img/me.jpg);
   background-size: cover;
   transform: skewX(-10deg) skewY(10deg);
+  -webkit-transform: skewX(-10deg) skewY(10deg);
+  -moz-transform: skewX(-10deg) skewY(10deg);
   z-index: 3;
 
   @media only screen and (max-width: $tablet-land) {
     transform: scale(0.8) skewX(-10deg) skewY(10deg) ;
+    -webkit-transform: scale(0.8) skewX(-10deg) skewY(10deg) ;
+    -moz-transform: scale(0.8) skewX(-10deg) skewY(10deg) ;
   }
 
   @media only screen and (max-width: $tablet) {
     transform: scale(0.7) skewX(-10deg) skewY(10deg) translate(120%, -10%);
+    -webkit-transform: scale(0.7) skewX(-10deg) skewY(10deg) translate(120%, -10%);
+    -moz-transform: scale(0.7) skewX(-10deg) skewY(10deg) translate(120%, -10%);
   }
 
   @media only screen and (max-width: $phone) {
     transform: scale(0.7) skewX(-10deg) skewY(10deg) translate(50%, 10%);
+    -webkit-transform: scale(0.7) skewX(-10deg) skewY(10deg) translate(50%, 10%);
+    -moz-transform: scale(0.7) skewX(-10deg) skewY(10deg) translate(50%, 10%);
 
   }
 
@@ -101,7 +111,6 @@
   height: 60%;
   border-radius: 10px;
   background-color: rgba($primary-color-light, 0.6);
-  animation: move__right 2s linear 4s forwards;
  
   &::-webkit-scrollbar {
     width: .6em;
@@ -171,7 +180,6 @@ letter-spacing: .3rem;
   display: flex;
   justify-content: space-evenly;
   opacity: 0;
-  animation: move__right 2s linear 4s forwards;
   @media only screen and (max-width: $phone) {
     width: 100%;
     justify-content: space-around;
@@ -192,6 +200,8 @@ letter-spacing: .3rem;
     &:hover {
       background-color: rgba($primary-color-light, 0.6);
       transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
     }
   }
 }

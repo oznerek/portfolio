@@ -20,6 +20,7 @@
 @keyframes blur {
   100% {
     filter: blur(20px);
+    -webkit-filter: blur(20px);
   }
 }
 
@@ -28,9 +29,13 @@
 @keyframes rotate {
     0% {
       transform: rotateX(0) rotateY(0) rotateZ(0);
+      -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
+      -moz-transform: rotateX(0) rotateY(0) rotateZ(0);
     }
     100% {
       transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+      -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+      -moz-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     }
   }
   
@@ -55,10 +60,13 @@
   @keyframes zooming {
     0% {
       transform:scale(1) translate(-50%, -50%);
+      -webkit-transform: scale(1) translate(-50%, -50%);
+      -moz-transform: scale(1) translate(-50%, -50%);
     }
     100% {
       transform: scale(1.4) translate(-30%, -50%);
-  
+      -webkit-transform:  scale(1.4) translate(-30%, -50%);
+      -moz-transform:  scale(1.4) translate(-30%, -50%);
     }
   }
   
@@ -118,10 +126,11 @@
   }
   @keyframes barGrowRight {
     0%{
-
+      opacity: 0;
       width: 0%;
     }
     100% {
+      opacity: 1;
       width: 100%;
     }
   }

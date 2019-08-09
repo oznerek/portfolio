@@ -18,7 +18,7 @@ class Contact extends React.Component {
 
   sendMessage = () => {
     let dataState = this.state;
-    
+
     if (dataState.email === undefined || dataState.email === "") {
       $(".validate__email").css({
         display: "none",
@@ -28,9 +28,12 @@ class Contact extends React.Component {
       this.setState(prevState => ({
         emptyField: { ...prevState.emptyField, email: true }
       }));
-
     } else {
-      $(".validate__email").css({ color: "red", visibility: "visible", display: 'inline-block' });
+      $(".validate__email").css({
+        color: "red",
+        visibility: "visible",
+        display: "inline-block"
+      });
 
       this.setState(prevState => ({
         emptyField: { ...prevState.emptyField, email: false }
@@ -39,31 +42,31 @@ class Contact extends React.Component {
         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
       }
-      let validate =()=> {
+      let validate = () => {
         var $result = $("#email_label");
         var email = dataState.email;
         $result.text("");
 
         if (validateEmail(email)) {
-          this.setState({validateEmail: true});
+          this.setState({ validateEmail: true });
         } else {
-          this.setState({validateEmail: false});
+          this.setState({ validateEmail: false });
           $result.text("Incorrect email");
           $result.css("color", "red");
         }
         return false;
-      }
+      };
       validate();
     }
     if (
-      dataState.message === undefined || 
+      dataState.message === undefined ||
       dataState.name === undefined ||
       dataState.subject === undefined ||
-      dataState.email === undefined ||       dataState.message === '' || 
-      dataState.name === '' ||
-      dataState.subject === '' ||
-      dataState.email === ''
-
+      dataState.email === undefined ||
+      dataState.message === "" ||
+      dataState.name === "" ||
+      dataState.subject === "" ||
+      dataState.email === ""
     ) {
       $(".validate").css({ color: "red", visibility: "visible" });
       return this.setState({
@@ -71,20 +74,17 @@ class Contact extends React.Component {
       });
     } else {
       if (this.state.validateEmail === true) {
-        console.log('za drugim razem')
+        console.log("za drugim razem");
         $(".validate").css({ color: "green", visibility: "visible" });
         // function sending this message {}
         return this.setState({ validateMessage: "Your message was sent" });
       } else {
-      $(".validate").css({ color: "red", visibility: "hidden" });
+        $(".validate").css({ color: "red", visibility: "hidden" });
       }
     }
-    
   };
 
   render() {
-    console.log(this.state);
-    console.log(this.state.emptyField.email);
     return (
       <section className="contact scrollspy" id="contact">
         <div className="page__title">
@@ -101,6 +101,10 @@ class Contact extends React.Component {
             <div>
               <p className="address__title">Email</p>
               <p className="address__code">oznerek@gmail.com</p>
+            </div>
+            <div>
+              <p className="address__title">Address</p>
+              <p className="address__code">Silesia</p>
             </div>
           </div>
           <div className="message">

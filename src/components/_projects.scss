@@ -35,6 +35,7 @@
     .project__photo {
       width: 60%;
       filter: brightness(1);
+      -webkit-filter: brightness(1);
       &-name {
         display: none;
       }
@@ -62,6 +63,8 @@
     background-color: $primary-color;
     border: 4px solid $secondary-color-light;
     transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
     position: absolute;
     right: -2.5rem;
     z-index: 1;
@@ -73,6 +76,8 @@
     }
     div {
       transform: rotateZ(-45deg);
+      -webkit-transform: rotateZ(-45deg);
+      -moz-transform: rotateZ(-45deg);
     }
   }
 
@@ -181,6 +186,7 @@
     height: 20rem;
     position: relative;
     filter: brightness(0.2);
+    -webkit-filter: brightness(0.2);
     transition: 0.5s;
 
     @media only screen and (max-width: $tablet-land) {
@@ -192,6 +198,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
       width: 15rem;
       height: 15rem;
       border-radius: 100%;
@@ -202,14 +210,15 @@
     }
     &-icon {
       display: none;
-      color: $red-color;
       font-size: 200%;
       width: 100%;
       height: 100%;
       flex-direction: row;
       justify-content: space-evenly;
       align-items: center;
-
+      a{
+        color: $red-color;
+      }
       div {
         display: flex;
         justify-content: center;
@@ -222,7 +231,10 @@
         &:hover {
           background-color: $secondary-color-light;
           filter: contrast(1.5);
+          -webkit-filter: contrast(1.5);
           transform: scale(1.2);
+          -webkit-transform: scale(1.2);
+          -moz-transform: scale(1.2);
         }
       }
     }
