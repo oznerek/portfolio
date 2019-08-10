@@ -23,6 +23,7 @@ export default class Projects extends React.Component {
                   <span className="project__about-tech">Java Script</span>
                   <span className="project__about-tech">HTML5</span>
                   <span className="project__about-tech">CSS3</span>
+                  <span className="project__about-tech">Bootstrap 4</span>
                   <span className="project__about-tech">ReactJS</span>
                   <span className="project__about-tech">React-Router</span>
                   <span className="project__about-tech">Redux-Form</span>
@@ -59,11 +60,11 @@ export default class Projects extends React.Component {
                   <span className="project__about-tech">Java Script</span>
                   <span className="project__about-tech">HTML5</span>
                   <span className="project__about-tech">CSS3</span>
+                  <span className="project__about-tech">Bootstrap 4</span>
                   <span className="project__about-tech">ReactJS</span>
                   <span className="project__about-tech">React-Redux</span>
                   <span className="project__about-tech">RWD</span>
-                  <span className="project__about-tech">REST API</span>{" "}
-                  <span className="project__about-tech">CSS3</span>
+                  <span className="project__about-tech">REST API</span>
                   <span className="project__about-tech">jQuery</span>
                 </div>
               </div>

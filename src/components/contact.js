@@ -74,7 +74,6 @@ class Contact extends React.Component {
       });
     } else {
       if (this.state.validateEmail === true) {
-        console.log("za drugim razem");
         $(".validate").css({ color: "green", visibility: "visible" });
         // function sending this message {}
         return this.setState({ validateMessage: "Your message was sent" });
@@ -108,7 +107,7 @@ class Contact extends React.Component {
             </div>
           </div>
           <div className="message">
-            <div>Send meaasge</div>
+            <div>Send message</div>
             <span className="message__line">
               <input
                 type="text"

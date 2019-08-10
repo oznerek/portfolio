@@ -1,23 +1,35 @@
 import React from "react";
-import $ from 'jquery';
+import $ from "jquery";
 export default class Header extends React.Component {
-
-
+  componentDidMount() {
+    setTimeout(
+    this.showRestPage, 7000)
+  }
+  showRestPage() {
+    $('.about, .projects, .skills').css("display", "block");
+    $('.footer, .contact').css("display", "flex");
+  }
   render() {
-    var wrap = $("#header");
-
-wrap.on("scroll", function(e) {
-    
-  if (this.scrollTop > 147) {
-    $([document.documentElement, document.body]).animate({
-      scrollTop: $("#contact").offset().top
-  }, 2000);  }
-});
+    const wrap = $("#header");
+    wrap.on("scroll", function(e) {
+      if (this.scrollTop > 147) {
+        $([document.documentElement, document.body]).animate(
+          {
+            scrollTop: $("#contact").offset().top
+          },
+          2000
+        );
+      }
+    });
     return (
       <section id="header" className="header scrollspy">
-        <div className="header__loader"><div className='text__center'>Loading . . .</div></div>
+        <div className="header__loader">
+          <div className="text__center">Loading . . .</div>
+        </div>
         <div className="slide__one" />
-        <div className="slide__two"><div className='text__center text__zoom'>Welcome on my web</div></div>
+        <div className="slide__two">
+          <div className="text__center text__zoom">Welcome on my web</div>
+        </div>
         <div className="slide__three ">
           <div className="background__spiner">
             <div className="spiner">

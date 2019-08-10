@@ -1,5 +1,5 @@
 .footer {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
@@ -12,6 +12,7 @@
   @media only screen and (max-width: $phone) {
       padding: .7rem;
     border-top: 1px solid red-color;   
+    font-size: 50%;
    } 
 
     &__link {

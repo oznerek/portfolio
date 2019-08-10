@@ -29,7 +29,7 @@ export default class Navigation extends React.Component {
             : $(".side__navigation").removeClass("dark__nav");
 
           // ADD ANIMATION when user scroll to section
-          if (id === "about") {
+          if (id1 === "about") {
             $(".information__card").css({
               "animation":
               "move__right 2s linear 4s forwards","-webkit-animation": "move__right 2s linear 4s forwards", "-moz-animation":"move__right 2s linear 4s forwards"}
@@ -38,7 +38,7 @@ export default class Navigation extends React.Component {
             $(".about__background").css({"animation": "blur 1s 2s forwards","-webkit-animation": "blur 1s 2s forwards", "-moz-animation":"blur 1s 2s forwards"});
             $(".card").css({"animation": "make_photo 3s 2.5s forwards","-webkit-animation": "make_photo 3s 2.5s forwards", "-moz-animation":"make_photo 3s 2.5s forwards"});
             $(".buttons").css({"animation": "move__right 2s linear 4s forwards","-webkit-animation": "move__right 2s linear 4s forwards", "-moz-animation":"move__right 2s linear 4s forwards"});
-          } else if (id === "skills") {
+          } else if (id1 === "skills") {
             $(".skill__image, .skill__information-frame").css(
               {"animation":"move__down 2s linear forwards","-webkit-animation": "move__down 2s linear forwards", "-moz-animation":"move__down 2s linear forwards"});
             $(".skill__bar").css(
@@ -59,8 +59,8 @@ export default class Navigation extends React.Component {
             : $(".mouse").removeClass("dark__nav");
                     
           id2 === "footer"
-            ? $(".mouse").css("display", "none")
-            : $(".mouse").css("display", "flex");
+            ? $(".mouse").css("visibility", "hidden")
+            : $(".mouse").css("visibility", "visible");
         }
         // adding active class to left navigation
         if (

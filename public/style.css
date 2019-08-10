@@ -356,7 +356,7 @@ body::-webkit-scrollbar-thumb {
   height: 15rem;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-  -moz-transform: preserve-3d;
+  -moz-transform-style: preserve-3d;
   transition: 2s;
   animation: rotate 30s linear infinite;
   -webkit-animation: rotate 30s linear infinite;
@@ -534,6 +534,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 80%; }
 
 .about {
+  display: none;
   height: 100%;
   width: 100%;
   position: relative;
@@ -697,7 +698,8 @@ body::-webkit-scrollbar-thumb {
   background-color: transparent;
   color: #d2d6d9;
   width: auto;
-  font-size: 100%; }
+  font-size: 100%;
+  cursor: pointer; }
   .btn__about {
     width: 12rem;
     height: 3rem;
@@ -709,6 +711,7 @@ body::-webkit-scrollbar-thumb {
       -moz-transform: scale(1.05); }
 
 .skills {
+  display: none;
   height: 100%;
   position: relative;
   background-color: #d2d6d9;
@@ -829,6 +832,7 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0px 0px 25px 20px white; }
 
 .projects {
+  display: none;
   min-height: 100%;
   height: min-content;
   position: relative; }
@@ -1025,7 +1029,7 @@ body::-webkit-scrollbar-thumb {
   background-position: center;
   position: relative;
   color: #282828;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-evenly; }
   .contact__header {
@@ -1043,10 +1047,11 @@ body::-webkit-scrollbar-thumb {
     height: 40%; }
     @media only screen and (max-width: 48rem) {
       .contact__content {
+        padding-top: 3rem;
         flex-direction: column;
         width: 100%;
         align-items: center;
-        height: 60%; } }
+        height: 80%; } }
   .contact .btn {
     padding: 1rem;
     border-radius: 50px; }
@@ -1109,13 +1114,25 @@ body::-webkit-scrollbar-thumb {
     font-weight: 100;
     color: #a52c2c;
     visibility: hidden; }
+    @media only screen and (max-width: 48rem) {
+      .message .validate {
+        font-size: 80%; } }
+    @media only screen and (max-width: 30rem) {
+      .message .validate {
+        font-size: 60%; } }
     .message .validate__email {
       font-weight: 100;
       display: none;
       text-align: end; }
+      @media only screen and (max-width: 48rem) {
+        .message .validate__email {
+          font-size: 80%; } }
+      @media only screen and (max-width: 30rem) {
+        .message .validate__email {
+          font-size: 60%; } }
 
 .footer {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
@@ -1127,7 +1144,8 @@ body::-webkit-scrollbar-thumb {
   @media only screen and (max-width: 30rem) {
     .footer {
       padding: .7rem;
-      border-top: 1px solid red-color; } }
+      border-top: 1px solid red-color;
+      font-size: 50%; } }
   .footer__link:link, .footer__link:visited {
     padding-left: 1rem;
     text-decoration: none;

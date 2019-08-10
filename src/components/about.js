@@ -39,8 +39,12 @@ export default class About extends React.Component {
               </div>
 
               <div className="buttons">
+              <a href="#skills">
                 <button className="btn btn__about">Skills</button>
+              </a>
+              <a href="#project">
                 <button className="btn btn__about">Project</button>
+              </a>
               </div>
             </div>
           </div>
