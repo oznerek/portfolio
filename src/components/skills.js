@@ -56,7 +56,7 @@ export default class Skills extends React.Component {
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">Bootstrap 4</h3>
-                <p className="skill__information-experience">9 mount</p>
+                <p className="skill__information-experience">9 month</p>
               </div>
               <div className="skill__bar bootstrap" ><div className='diamond'></div></div>
             </div>
@@ -69,7 +69,7 @@ export default class Skills extends React.Component {
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">React</h3>
-                <p className="skill__information-experience"> 9 mounth</p>
+                <p className="skill__information-experience"> 9 month</p>
               </div>
               <div className="skill__bar react" ><div className='diamond'></div></div>
             </div>
@@ -82,7 +82,7 @@ export default class Skills extends React.Component {
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">Sass</h3>
-                <p className="skill__information-experience"> 5 mounth</p>
+                <p className="skill__information-experience"> 5 month</p>
               </div>
               <div className="skill__bar sass" ><div className='diamond'></div></div>
             </div>
@@ -107,7 +107,7 @@ export default class Skills extends React.Component {
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">Node JS</h3>
-                <p className="skill__information-experience"> 3 mount</p>
+                <p className="skill__information-experience"> 3 month</p>
               </div>
               <div className="skill__bar node" ><div className='diamond'></div></div>
             </div>
@@ -119,7 +119,7 @@ export default class Skills extends React.Component {
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">jQuery</h3>
-                <p className="skill__information-experience"> 3 mount</p>
+                <p className="skill__information-experience"> 3 month</p>
               </div>
               <div className="skill__bar jquery" ><div className='diamond'></div></div>
             </div>
@@ -131,7 +131,7 @@ export default class Skills extends React.Component {
             <div className="skill__information">
               <div className="skill__information-frame">
                 <h3 className="skill__information-name">Git</h3>
-                <p className="skill__information-experience"> 6 mount</p>
+                <p className="skill__information-experience"> 6 month</p>
               </div>
               <div className="skill__bar git" ><div className='diamond'></div></div>
             </div>
