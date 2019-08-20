@@ -343,7 +343,9 @@ body::-webkit-scrollbar-thumb {
 
 .background__spiner {
   width: 50%;
-  position: relative; }
+  position: relative;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; }
   @media only screen and (max-width: 30rem) {
     .background__spiner {
       width: 0; } }
@@ -356,8 +358,6 @@ body::-webkit-scrollbar-thumb {
   height: 15rem;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transition: 2s;
   animation: rotate 30s linear infinite;
   -webkit-animation: rotate 30s linear infinite;
   -moz-animation: rotate 30s linear infinite; }
@@ -971,12 +971,19 @@ body::-webkit-scrollbar-thumb {
     .project .formcreator .project__photo-name {
       border-color: #384347;
       color: #282828; }
+  .project .luxus {
+    background-image: url(img/luxus.jpg);
+    background-size: cover;
+    background-position: center; }
+    .project .luxus .project__photo-name {
+      border-color: #384347;
+      color: #282828; }
   .project__photo {
     width: 70%;
     height: 20rem;
     position: relative;
-    filter: brightness(0.2);
-    -webkit-filter: brightness(0.2);
+    filter: brightness(0.6);
+    -webkit-filter: brightness(0.6);
     transition: 0.5s; }
     @media only screen and (max-width: 56.25rem) {
       .project__photo {

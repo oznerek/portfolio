@@ -209,6 +209,8 @@
 .background__spiner {
   width: 50%;
   position: relative;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   @media only screen and (max-width: $phone) {
     width: 0;
   }
@@ -221,8 +223,7 @@
   height: 15rem;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transition: 2s;
+  // transition: 2s;
   animation: rotate 30s linear infinite;
   -webkit-animation: rotate 30s linear infinite;
   -moz-animation: rotate 30s linear infinite;

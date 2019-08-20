@@ -17,7 +17,6 @@ $pageSize: 300;
   font-family: disney_font;
   src: url(fonts/disney.otf);
 }
-
 *,
 *::before,
 *::after {
@@ -25,7 +24,6 @@ $pageSize: 300;
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   box-sizing: border-box;
   height: 100%;
@@ -41,7 +39,6 @@ body {
   line-height: 1.6;
   font-size: 1.8rem;
 }
-
 .root,
 .App {
   position: relative;

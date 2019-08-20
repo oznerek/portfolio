@@ -31,7 +31,7 @@
   &:hover {
     .year {
       color: $red-color;
-      border-color: $red-color; 
+      border-color: $red-color;
     }
     .project__photo {
       width: 60%;
@@ -156,28 +156,37 @@
       padding: 0 0.5rem 0 0.5rem;
     }
   }
-  .polluted {    
+  .polluted {
     background-image: url(img/polluted.jpg);
     background-size: cover;
-    background-position: center;  
+    background-position: center;
   }
-  
-  .foodhouse {    
+
+  .foodhouse {
     background-image: url(img/foodhouse.jpg);
     background-size: cover;
-    background-position: center;  
+    background-position: center;
   }
-  .portfolio {    
+  .portfolio {
     background-image: url(img/portfolio.jpg);
     background-size: cover;
-    background-position: center;  
+    background-position: center;
   }
-  .formcreator {    
+  .formcreator {
     background-image: url(img/formcreator.jpg);
     background-size: cover;
-    background-position: center;  
-    .project__photo-name{
-      border-color:$primary-color-light;
+    background-position: center;
+    .project__photo-name {
+      border-color: $primary-color-light;
+      color: $primary-color;
+    }
+  }
+  .luxus {
+    background-image: url(img/luxus.jpg);
+    background-size: cover;
+    background-position: center;
+    .project__photo-name {
+      border-color: $primary-color-light;
       color: $primary-color;
     }
   }
@@ -186,8 +195,8 @@
     width: 70%;
     height: 20rem;
     position: relative;
-    filter: brightness(0.2);
-    -webkit-filter: brightness(0.2);
+    filter: brightness(0.6);
+    -webkit-filter: brightness(0.6);
     transition: 0.5s;
 
     @media only screen and (max-width: $tablet-land) {
@@ -217,7 +226,7 @@
       flex-direction: row;
       justify-content: space-evenly;
       align-items: center;
-      a{
+      a {
         color: $red-color;
       }
       div {

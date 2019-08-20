@@ -162,6 +162,43 @@ export default class Projects extends React.Component {
             </div>
           </div>
             </Slide>
+            <Slide left>
+          <div className="project project__left">
+            <div className="year">
+              <div>2019</div>
+            </div>
+            <div className="project__about">
+              <div className="project__about-name">Luxus</div>
+              <div className="project__about-description">
+              This is the fake website of Lexus, created for learning.
+                <div>
+                  <span className="project__about-tech">Java Script</span>
+                  <span className="project__about-tech">HTML5</span>
+                  <span className="project__about-tech">CSS3</span>
+                  <span className="project__about-tech">ReactJS</span>
+                  <span className="project__about-tech">React-Router</span>
+                  <span className="project__about-tech">RWD</span>
+                  <span className="project__about-tech">CSS3</span>
+                  <span className="project__about-tech">jQuery</span>
+                  <span className="project__about-tech">Sass</span>
+                </div>
+              </div>
+            </div>
+            <div className="project__photo luxus">
+              <div className="project__photo-name">
+                <span>Luxus</span>
+              </div>
+              <div className="project__photo-icon">
+                <div>
+                <a href='https://oznerek.github.io/luxus'><i className="far fa-eye" /></a>
+                </div>
+                <div>
+                <a href='https://github.com/oznerek/luxus'> <i className="fas fa-code" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+            </Slide>
         </div>
       </section>
     );
