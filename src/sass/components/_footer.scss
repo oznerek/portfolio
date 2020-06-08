@@ -1,0 +1,31 @@
+.footer {
+    background-color: $primary-color;
+    color: $secondary-color-light;
+    // display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0px;
+    font-size: 16px;
+
+    @media only screen and (max-width: $tablet_land) { padding: 20px; } 
+    @media only screen and (max-width: $phone) { font-size: 14px; } 
+
+    &__link {
+        &:link,
+        &:visited {
+            padding-left: 1rem;
+            text-decoration: none; 
+            color: $secondary-color-light;
+            transition: all .2s;
+        }
+        &:hover{ color: $secondary-color; } 
+    }
+    &__author,
+    &__powered {
+        display: flex;
+        justify-content: center;
+    }
+    &__powered {
+        font-size: 14px
+    }
+}
