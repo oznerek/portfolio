@@ -1,140 +1,62 @@
 import React from "react";
+import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
+
 
 export default class Skills extends React.Component {
   
   render() {
     return (
       <section id="skills" className="skills scrollspy">
-        <div className="page__title">
-          <p className="page__title-number">02</p>
-          <h2 className="page__title-text">Skills</h2>
-        </div>
-
-        <div className="grid">
-          <div className="skill">
-            <div className="skill__image">
-              <img src="img/html5.png" alt='html' />
-            </div>
-            <div className="skill__information">
-              <div className="skill__information-frame">
-                <h3 className="skill__information-name">HTML5</h3>
-                <p className="skill__information-experience"> 1 year</p>
-              </div>
-              <div className="skill__bar html" ><div className='diamond'></div></div>
-            </div>
-          </div>
-          <div className="skill">
-            <div className="skill__image">
-              <img src="img/css3.svg" alt='css' />
-            </div>
-            <div className="skill__information">
-              <div className="skill__information-frame">
-                <h3 className="skill__information-name">CSS3</h3>
-                <p className="skill__information-experience"> 1 year</p>
-              </div>
-              <div className="skill__bar css" ><div className='diamond'></div></div>
-            </div>
+        <div className="skill__container">
+          <div className="page__title">
+            <Fade delay={300}>
+              <h2 className="page__title-text">Skills</h2>
+            </Fade>
+            <img src="img/skills.png" className="page__title-img"></img>
           </div>
 
-          <div className="skill">
-            <div className="skill__image">
-              <img src="img/js.png" alt='java script'/>
+          <div className="skills__container description">
+            <Fade delay={1000}>
+              <div className="page__descriptions">
+                In my everyday work I use mainly basic tools, i.e. HTML5 / CSS3 / JavaScript. 
+                Depending on the project, I also use popular libraries or CMS. 
+                I am not afraid of new challenges and I am constantly expanding my knowledge and learning new tools. 
+                Currently I am learning Vue.js
             </div>
-            <div className="skill__information">
-              <div className="skill__information-frame">
-                <h3 className="skill__information-name">Java Script</h3>
-                <p className="skill__information-experience"> 1 year</p>
+            </Fade>
+            <Slide bottom duration={1500}>
+              <div className="skills__container">
+                <div className="skills__block">
+                  <div className="skills__block--header"> Languages </div>
+                  <div className="skills__block--list">
+                    <div>JavaScript</div>
+                    <div>PHP</div>
+                    <div>HTML5 / CSS3</div>
+                  </div>
+                </div>
+                <div className="skills__block">
+                  <div className="skills__block--header"> Framework / Libraries </div>
+                  <div className="skills__block--list">
+                    <div>React</div>
+                    <div>jQuery</div>
+                    <div>Sass</div>
+                    <div>Bootstrap</div>
+                    <div>Vue</div>
+                  </div>
+                </div>
+                <div className="skills__block">
+                  <div className="skills__block--header"> Other </div>
+                  <div className="skills__block--list">
+                    <div>MySQL</div>
+                    <div>Wordpress</div>
+                    <div>Git</div>
+                    <div>RWD</div>
+                    <div>Photoshop</div>
+                  </div>
+                </div>
               </div>
-              <div className="skill__bar js" ><div className='diamond'></div></div>
-            </div>
-          </div>
-
-          <div className="skill">
-            <div className="skill__image">
-              <img src="img/bootstrap.png" alt='bootstrap' />
-            </div>
-            <div className="skill__information">
-              <div className="skill__information-frame">
-                <h3 className="skill__information-name">Bootstrap 4</h3>
-                <p className="skill__information-experience">9 month</p>
-              </div>
-              <div className="skill__bar bootstrap" ><div className='diamond'></div></div>
-            </div>
-          </div>
-
-          <div className="skill">
-            <div className="skill__image">
-              <img src="img/react.png" alt='react' />
-            </div>
-            <div className="skill__information">
-              <div className="skill__information-frame">
-                <h3 className="skill__information-name">React</h3>
-                <p className="skill__information-experience"> 9 month</p>
-              </div>
-              <div className="skill__bar react" ><div className='diamond'></div></div>
-            </div>
-          </div>
-
-          <div className="skill">
-            <div className="skill__image">
-              <img src="img/sass.svg" alt='sass'/>
-            </div>
-            <div className="skill__information">
-              <div className="skill__information-frame">
-                <h3 className="skill__information-name">Sass</h3>
-                <p className="skill__information-experience"> 5 month</p>
-              </div>
-              <div className="skill__bar sass" ><div className='diamond'></div></div>
-            </div>
-          </div>
-
-          <div className="skill">
-            <div className="skill__image">
-              <img src="img/mysql.svg" alt='mysql' />
-            </div>
-            <div className="skill__information">
-              <div className="skill__information-frame">
-                <h3 className="skill__information-name">MySql</h3>
-                <p className="skill__information-experience"> 4 month</p>
-              </div>
-              <div className="skill__bar mysql" ><div className='diamond'></div></div>
-            </div>
-          </div>
-          <div className="skill">
-            <div className="skill__image">
-              <img src="img/node.png" alt='node js' />
-            </div>
-            <div className="skill__information">
-              <div className="skill__information-frame">
-                <h3 className="skill__information-name">Node JS</h3>
-                <p className="skill__information-experience"> 3 month</p>
-              </div>
-              <div className="skill__bar node" ><div className='diamond'></div></div>
-            </div>
-          </div>
-          <div className="skill">
-            <div className="skill__image">
-              <img src="img/jquery.png" alt='jquery' />
-            </div>
-            <div className="skill__information">
-              <div className="skill__information-frame">
-                <h3 className="skill__information-name">jQuery</h3>
-                <p className="skill__information-experience"> 3 month</p>
-              </div>
-              <div className="skill__bar jquery" ><div className='diamond'></div></div>
-            </div>
-          </div>
-          <div className="skill">
-            <div className="skill__image">
-              <img src="img/git.png"  alt='git'/>
-            </div>
-            <div className="skill__information">
-              <div className="skill__information-frame">
-                <h3 className="skill__information-name">Git</h3>
-                <p className="skill__information-experience"> 6 month</p>
-              </div>
-              <div className="skill__bar git" ><div className='diamond'></div></div>
-            </div>
+            </Slide>
           </div>
         </div>
       </section>

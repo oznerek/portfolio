@@ -1,13 +1,14 @@
 /* Color Theme Swatches in RGBA */
-$primary-color: rgba(40, 40, 40, 1);
-$primary-color-light: rgb(56, 67, 71);
+$primary-color: #040d25;
+$primary-color-light: #131c32;
 $secondary-color: rgba(134, 166, 154, 1);
 $secondary-color-light: rgba(210, 214, 217, 1);
 $red-color: rgba(165, 44, 44, 1);
+$body-color: #eee;
 
 // MEDIA SIZE
 
-$desktop: 75rem; // 1200px
+$desktop: 75rem; // 1400px
 $tablet_land: 56.25rem; //900px
 $tablet: 48rem; //760
 $phone: 30rem; //480
@@ -31,7 +32,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: $primary-color;
+  min-width: 320px;
+  background-color: $body-color;
   height: 100%;
   color: $secondary-color-light;
   font-family: 'Lato', sans-serif;
@@ -52,61 +54,166 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  border: 1px solid $primary-color;
   background-color: $secondary-color-light;
+  border: 1px solid $primary-color;
   border-radius: 50px;
 }
 
 .page__title {
-  position: absolute;
-  top: 5rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  z-index: 9;
-  color: currentColor;
+  padding: 40px 0px;
   @media only screen and (max-width: $phone) {
-    top: 4rem;
+    font-size: 14px;
   }
-
   &-text {
     display: flex;
     align-self: center;
     font-size: 200%;
     letter-spacing: 0.5rem;
     margin: auto;
-    transform: translateX(-5rem);
-
-    @media only screen and (max-width: $phone) {
-      font-size: 100%;
-      margin-left: 5%;
-      transform: translateX(0);
-    }
-  }
-  &-number {
-    display: flex;
-    align-items: center;
-    font-family: "Lucida Grande";
-    color: $red-color;
-    font-weight: 900;
-    font-size: 250%;
-
-    @media only screen and (max-width: $phone) {
-      font-size: 125%;
-    }
-
     &::before {
       content: " ";
       display: block;
       width: 5rem;
       height: 3px;
-      background-color: $secondary-color-light;
-      margin-right: 1rem;
+      background-color: currentColor;
+      margin-right: 30px;
+      margin-top: 25px;
 
       @media only screen and (max-width: $phone) {
-        width: 3rem;
+        width: 25px;
         height: 2px;
+        margin-right: 15px;
+        margin-top: 22px;
       }
     }
+
   }
+}
+.page__descriptions {
+    color: currentColor;
+    width: 50%;
+    @media only screen and (max-width: 1080px) {
+      width: 80%;
+    }
+    @media only screen and (max-width: $phone) {
+     width: 100%;
+    }
+  
+}
+/// poly-fluid-sizing
+/// Generate linear interpolated size values through multiple break points
+/// @param $property - A string CSS property name
+/// @param $map - A SASS map of viewport unit and size value pairs
+/// @requires function linear-interpolation
+/// @requires function map-sort
+/// @example
+///   @include poly-fluid-sizing('font-size', (576px: 22px, 768px: 24px, 992px: 34px));
+/// @author Jake Wilson <jake.e.wilson@gmail.com>
+@mixin poly-fluid-sizing($property, $map) {
+  // Get the number of provided breakpoints
+  $length: length(map-keys($map));
+ 
+  // Error if the number of breakpoints is < 2
+  @if ($length < 2) {
+    @error "poly-fluid-sizing() $map requires at least values";
+  }
+ 
+  // Sort the map by viewport width (key)
+  $map: map-sort($map);
+  $keys: map-keys($map);
+ 
+  // Minimum size
+  #{$property}: map-get($map, nth($keys,1));
+ 
+  // Interpolated size through breakpoints
+  @for $i from 1 through ($length - 1) {
+    @media (min-width:nth($keys,$i)) {
+      #{$property}: linear-interpolation((nth($keys,$i): map-get($map, nth($keys,$i)), nth($keys,($i+1)): map-get($map, nth($keys,($i + 1)))));
+    }
+  }
+ 
+  // Maxmimum size
+  @media (min-width:nth($keys,$length)) {
+    #{$property}: map-get($map, nth($keys,$length));
+  }
+}
+ 
+/// linear-interpolation
+/// Calculate the definition of a line between two points
+/// @param $map - A SASS map of viewport widths and size value pairs
+/// @returns A linear equation as a calc() function
+/// @example
+///   font-size: linear-interpolation((320px: 18px, 768px: 26px));
+/// @author Jake Wilson <jake.e.wilson@gmail.com>
+@function linear-interpolation($map) {
+$keys: map-keys($map);
+@if (length($keys) != 2) {
+  @error "linear-interpolation() $map must be exactly 2 values";
+}
+// The slope
+$m: (map-get($map, nth($keys, 2)) - map-get($map, nth($keys, 1)))/(nth($keys, 2) - nth($keys,1));
+
+// The y-intercept
+$b: map-get($map, nth($keys, 1)) - $m * nth($keys, 1);
+
+// Determine if the sign should be positive or negative
+$sign: "+";
+@if ($b < 0) {
+  $sign: "-";
+  $b: abs($b);
+}
+
+@return calc(#{$m*100}vw #{$sign} #{$b});
+}
+
+/// list-sort
+/// Sort a SASS list
+/// @param $list - A SASS list
+/// @returns A sorted SASS list
+/// @requires function list-remove
+/// @author Jake Wilson <jake.e.wilson@gmail.com>
+@function list-sort($list) {
+$sortedlist: ();
+@while length($list) > 0 {
+  $value: nth($list,1);
+  @each $item in $list {
+  @if $item < $value {
+      $value: $item;
+  }
+  }
+  $sortedlist: append($sortedlist, $value, 'space');
+  $list: list-remove($list, index($list, $value));
+}
+@return $sortedlist;
+}
+
+/// map-sort
+/// Sort map by keys
+/// @param $map - A SASS map
+/// @returns A SASS map sorted by keys
+/// @requires function list-sort
+/// @author Jake Wilson <jake.e.wilson@gmail.com>
+@function map-sort($map) {
+$keys: list-sort(map-keys($map));
+$sortedMap: ();
+@each $key in $keys {
+  $sortedMap: map-merge($sortedMap, ($key: map-get($map, $key)));
+}
+@return $sortedMap;
+}
+
+/// list-remove
+/// Remove an item from a list
+/// @param $list - A SASS list
+/// @param $index - The list index to remove
+/// @returns A SASS list
+/// @author Jake Wilson <jake.e.wilson@gmail.com>
+@function list-remove($list, $index) {
+$newList: ();
+@for $i from 1 through length($list) {
+  @if $i != $index {
+  $newList: append($newList, nth($list,$i), 'space');
+  }
+}
+@return $newList;
 }

@@ -5,12 +5,9 @@ const Footer = () => {
     <section className="footer scrollspy" id="footer">
       <div className="footer__author">
       <p>
-        Copyright by Michał Oznerek <sup>&copy;</sup> - 2019
+        Copyright by Michał Oznerek <sup>&copy;</sup> - 2019-2020
       </p>
-      <a href='https://oznerek.github.io/portfolio/' className="footer__link">
-        {" "}
-        Contact{" "}
-      </a>
+
       </div>
       <div className='footer__powered'>
         Powered by
