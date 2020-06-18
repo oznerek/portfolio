@@ -3,9 +3,7 @@ import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
 
 
-export default class Skills extends React.Component {
-  
-  render() {
+const Skills = () => {
     return (
       <section id="skills" className="skills scrollspy">
         <div className="skill__container">
@@ -13,7 +11,7 @@ export default class Skills extends React.Component {
             <Fade delay={300}>
               <h2 className="page__title-text">Skills</h2>
             </Fade>
-            <img src="img/skills.png" className="page__title-img"></img>
+            <img alt="" src="img/skills.png" className="page__title-img"></img>
           </div>
 
           <div className="skills__container description">
@@ -61,5 +59,6 @@ export default class Skills extends React.Component {
         </div>
       </section>
     );
-  }
 }
+
+export default Skills;

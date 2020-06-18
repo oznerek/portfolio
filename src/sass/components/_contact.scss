@@ -1,214 +1,208 @@
 .contact {
-    height: auto; 
-    background-color: $secondary-color-light;
-    &__container{
-        max-width: 1400px;
-        margin: auto;
-        padding: 100px 40px;
-        width: 100%;
-        color: $primary-color;
-        @media only screen and (max-width: $phone) {
-           padding: 60px 15px;
-        }
-
+  height: auto;
+  background-color: $secondary-color-light;
+  &__container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 100px 40px;
+    width: 100%;
+    color: $primary-color;
+    @media only screen and (max-width: $phone) {
+      padding: 60px 15px;
     }
+  }
 
-    &__header {
-        font-size: 24px;
-        padding-bottom: 30px;
-        text-transform: uppercase;
-        max-width: 1150px;
-        margin: auto;
-    }
-    &__links{
-        width: 100%;
-    }
+  &__header {
+    font-size: 24px;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    max-width: 1150px;
+    margin: auto;
+  }
+  &__links {
+    width: 100%;
+  }
 
-    .page__title-number::before {
-        background-color: $primary-color;
-      }
-    &__content {
-        display: flex;
-        max-width: 1150px;
-        margin:auto;
-        justify-content: space-between;
-        padding-bottom: 60px;
+  .page__title-number::before {
+    background-color: $primary-color;
+  }
+  &__content {
+    display: flex;
+    max-width: 1150px;
+    margin: auto;
+    justify-content: space-between;
+    padding-bottom: 60px;
 
-        @media only screen and (max-width: $tablet) {
-            flex-direction: column;
-            width:100%;
-            padding-bottom: 0px;
-          }
+    @media only screen and (max-width: $tablet) {
+      flex-direction: column;
+      width: 100%;
+      padding-bottom: 0px;
     }
+  }
 }
 
 .contacts {
-    width: calc(50% - 15px);
-    @media only screen and (max-width: $tablet) {
+  width: calc(50% - 15px);
+  @media only screen and (max-width: $tablet) {
+    width: 100%;
+  }
+  &__row {
+    padding-bottom: 20px;
+  }
+  &__title {
+    color: $primary-color-light;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  &__fill {
+    color: $primary-color;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 100;
+    text-decoration: none;
+    &.link {
+      width: fit-content;
+      display: block;
+      &::after {
+        content: "";
         width: 100%;
-    }
-    &__row {
-        padding-bottom: 20px;
-    }
-    &__title {
-        color: $primary-color-light;
-        font-size: 12px;
-        line-height: 1;
-        text-transform: uppercase;
-        font-weight: 800;
-    }
-
-    &__fill {
-        color: $primary-color;
-        font-size: 20px;
-        line-height: 1;
-        font-weight: 100;
-        text-decoration: none;
-        &.link{
-            width: fit-content;
-            display: block;
-            &::after {
-                content: '';
-                width: 100%;
-                display: block;
-                margin-top: 1px;
-                height: 1px;
-                background-color: $red-color;
-                transform: scaleX(0);
-                -webkit-transform: scaleX(0);
-                transition: .3s;
-            }
-            &:hover{
-                color: rgba($primary-color, .7);
-                &::after{
-                    transform: scaleX(1);
-                    -webkit-transform: scaleX(1);
-                }
-            }
+        display: block;
+        margin-top: 1px;
+        height: 1px;
+        background-color: $red-color;
+        transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+        transition: 0.3s;
+      }
+      &:hover {
+        color: rgba($primary-color, 0.7);
+        &::after {
+          transform: scaleX(1);
+          -webkit-transform: scaleX(1);
         }
+      }
     }
+  }
 
-    &__link {
-        color: currentColor;
-        &:hover,
-        &:active {
-            text-decoration: none;
-            color: $secondary-color;
-        }
+  &__link {
+    color: currentColor;
+    &:hover,
+    &:active {
+      text-decoration: none;
+      color: $secondary-color;
     }
+  }
 }
 
 .message {
-    width: calc(50% - 15px);
-    height: auto;
-    @media only screen and (max-width: $tablet) {
-        padding: 60px 0px;
+  width: calc(50% - 15px);
+  height: auto;
+  @media only screen and (max-width: $tablet) {
+    padding: 60px 0px;
+    width: 100%;
+  }
+  &__header {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .message__field {
+      width: calc(50% - 10px);
+    }
+    @media only screen and (max-width: 500px) {
+      flex-direction: column;
+      .message__field {
         width: 100%;
+      }
     }
-    &__header{
-        margin-bottom: 30px;
-        text-transform: uppercase;
-        font-size: 20px;
+  }
+  &__field {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    transition: 0.2s;
+    &.active .message__label {
+      top: -10px;
+      font-size: 14px;
     }
-    &__row {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        .message__field{ width: calc(50% - 10px );}
-        @media only screen and (max-width: 500px) {
-            flex-direction: column;
-            .message__field{ width: 100%;}
-        }
+  }
+  &__label {
+    position: absolute;
+    background-color: $secondary-color-light;
+    padding: 0px 10px;
+    top: 10px;
+    left: 5px;
+    line-height: 1;
+  }
+  &__input {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color;
 
-    }
-    &__field {
-        width: 100%;
-        display: block;
-        position: relative;
-        margin-bottom: 20px;
-        transition: .2s;
-        &.active .message__label {
-            top: -10px;
-            font-size: 14px;
-        }
-    }
-    &__label {
-        position: absolute;
-        background-color: $secondary-color-light;
-        padding: 0px 10px;
-        top: 10px;
-        left: 5px;
-        line-height: 1;
-    }
-    &__input {
-        border-radius: 5px;
-        padding: 10px;
-        font-size: 18px;
-        width: 100%;
-        background-color: transparent;
-        border: 1px solid $primary-color;
+    &:focus,
+    &:active,
+    &:visited {
+      background-color: transparent;
+      color: $primary-color;
+      outline: none;
+      &::placeholder {
         color: $primary-color;
-
-        &:focus, &:active, &:visited {
-            background-color: transparent;
-            color: $primary-color;
-            outline: none;
-            &::placeholder{
-                color: $primary-color;
-            }
-        }
-        &:-webkit-autofill,
-        &:-webkit-autofill:hover, 
-        &:-webkit-autofill:focus, 
-        &:-webkit-autofill:active  {
-            -webkit-box-shadow: 0 0 0 30px $secondary-color-light inset !important;
-        }
-
-        &::placeholder {
-            color: $secondary-color;
-            font-weight: 200;
-        }
-
-        &-message {
-            background-attachment: s;
-            min-height: 120px;        
-        }
+      }
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px $secondary-color-light inset !important;
     }
 
-
-    &__btn {
-        display: block;
-        width: 230px;
-        color: $secondary-color-light;
-        background-color: $primary-color;
-        padding: 1rem; 
-        margin: auto;
-        border-radius: 5px;
-        text-align: center;
-        cursor: pointer;
-        &:hover {
-            background-color: rgba($primary-color, .9);
-        }
-    } 
-    .validate {
-        width: 100%;
-        font-weight: 100;
-        font-size: 18px;
-        color: $red-color;
-        display: none;
-        padding-bottom: 20px;
-   
-    &__email {
-        font-weight: 100;
-        display: none;
-        text-align: end;
-        @media only screen and (max-width: $tablet) {
-            font-size: 80%;
-        }
-        @media only screen and (max-width: $phone) {
-            font-size: 60%;
-        }
+    &::placeholder {
+      color: $secondary-color;
+      font-weight: 200;
     }
-}
-}
 
+    &-message {
+      background-attachment: s;
+      min-height: 120px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 230px;
+    color: $secondary-color-light;
+    background-color: $primary-color;
+    padding: 1rem;
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba($primary-color, 0.9);
+    }
+  }
+  .validate {
+    width: 100%;
+    font-weight: 100;
+    font-size: 14px;
+    color: $red-color;
+
+   &__success{
+       margin: 10px 0px;
+       text-align: center;
+       font-size: 18px;
+   }
+  }
+}

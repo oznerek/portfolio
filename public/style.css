@@ -203,7 +203,7 @@ body::-webkit-scrollbar-thumb {
     right: 40px;
     width: 40%;
     height: 100vh;
-    background-image: url("../img/about_background-thin.jpg");
+    background-image: url("img/about_background-thin.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -505,6 +505,7 @@ body::-webkit-scrollbar-thumb {
         .about .page__descriptions.first {
           margin-top: 0px; } }
     .about .page__descriptions .heading {
+      display: block;
       font-size: 24px;
       padding-bottom: 20px; }
   .about .page__title-img {
@@ -855,7 +856,7 @@ body::-webkit-scrollbar-thumb {
       width: fit-content;
       display: block; }
       .contacts__fill.link::after {
-        content: '';
+        content: "";
         width: 100%;
         display: block;
         margin-top: 1px;
@@ -863,7 +864,7 @@ body::-webkit-scrollbar-thumb {
         background-color: #a52c2c;
         transform: scaleX(0);
         -webkit-transform: scaleX(0);
-        transition: .3s; }
+        transition: 0.3s; }
       .contacts__fill.link:hover {
         color: rgba(4, 13, 37, 0.7); }
         .contacts__fill.link:hover::after {
@@ -902,7 +903,7 @@ body::-webkit-scrollbar-thumb {
     display: block;
     position: relative;
     margin-bottom: 20px;
-    transition: .2s; }
+    transition: 0.2s; }
     .message__field.active .message__label {
       top: -10px;
       font-size: 14px; }
@@ -950,20 +951,12 @@ body::-webkit-scrollbar-thumb {
   .message .validate {
     width: 100%;
     font-weight: 100;
-    font-size: 18px;
-    color: #a52c2c;
-    display: none;
-    padding-bottom: 20px; }
-    .message .validate__email {
-      font-weight: 100;
-      display: none;
-      text-align: end; }
-      @media only screen and (max-width: 48rem) {
-        .message .validate__email {
-          font-size: 80%; } }
-      @media only screen and (max-width: 30rem) {
-        .message .validate__email {
-          font-size: 60%; } }
+    font-size: 14px;
+    color: #a52c2c; }
+    .message .validate__success {
+      margin: 10px 0px;
+      text-align: center;
+      font-size: 18px; }
 
 .footer {
   background-color: #040d25;
