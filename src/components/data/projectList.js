@@ -60,8 +60,8 @@ exports.projectList = [
   },
   {
     title: "Portfolio",
-    githubCode: "https://oznerek.github.io/portfolio/",
-    githubLink: "https://github.com/oznerek/portfolio",
+    githubCode: "https://github.com/oznerek/portfolio",
+    githubLink: "https://oznerek.github.io/portfolio/",
     description:
       "Website created to show all my projects and skills in one place.",
     tools: ["Java Script", "HTML5", "CSS3", "Sass", "RWD", "React", "jQuery"],
@@ -69,8 +69,8 @@ exports.projectList = [
   },
   {
     title: "Luxus",
-    githubCode: "https://oznerek.github.io/luxus",
-    githubLink: "https://github.com/oznerek/luxus",
+    githubCode: "https://github.com/oznerek/luxus",
+    githubLink: "https://oznerek.github.io/luxus",
     description: "This is the fake website of Lexus, created for learning.",
     tools: [
       "Java Script",

@@ -46,7 +46,7 @@ class Contact extends Form {
               { contact.map(item => (
                 <div key={item.title} className="contacts__row">
                   <p className="contacts__title">{item.title}</p>
-                  {(item.link) ? <a href={item.link} target="blank" className="contacts__fill link">{item.fill}</a> : <p className="contacts__fill">{item.fill}</p> }
+                  {(item.link) ? <a href={item.link} target="_blank" className="contacts__fill link">{item.fill}</a> : <p className="contacts__fill">{item.fill}</p> }
                 </div>
               ))}
             </div>

@@ -81,12 +81,12 @@ export default class Navigation extends Component {
               </ul>
 
               <div className="nav__link">
-                <a href="http://github.com/oznerek" target="blank">
+                <a href="http://github.com/oznerek" target="_blank">
                   <img alt="" src="img/github.svg" className="github"></img>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/micha%C5%82-oznerek/"
-                  target="blank"
+                  target="_blank"
                 >
                   <img alt="" src="img/linkedin.svg" className="linkedin"></img>
                 </a>

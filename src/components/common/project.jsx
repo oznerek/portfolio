@@ -10,12 +10,12 @@ const Project = ({ data }) => {
           <div className={"project__photo " + addClass}>
             <div className="project__photo-icon">
               <div>
-                <a target="blank" href={githubLink}>
+                <a target="_blank" href={githubLink}>
                   <i className="fa fa-globe" />
                 </a>
               </div>
               <div>
-                <a target="blank" href={githubCode}>
+                <a target="_blank" href={githubCode}>
                   <i className="fas fa-code" />
                 </a>
               </div>
